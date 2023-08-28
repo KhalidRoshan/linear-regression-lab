@@ -1,1 +1,100 @@
 # linear-regression-lab
+
+## Instructions
+The objective of this lab is to familiarize you with linear regression. We will be using the 
+spam email dataset based on the Enron case. You can find it in this repository and
+also in the original post linked at the bottom. 
+
+*Deliverable*: The deliverable is a report with the required screenshots and answers to the
+questions in the instructions below. 
+
+### Data exploration
+The first step in any data science/ML/AI project is to take a look at the dataset. The objective is
+two-fold. First, we need to know if there are any missing data points or if we have data in
+unexpected formats. Second, we want to know basic statistical facts about the dataset including
+number of rows and columns, maximum and minimum values, and the largest correlations between
+columns. 
+
+1. Run the file ```data-exploration.py``` on a terminal. You can do this by typing 
+```python data-exploration.py```. Note that you cannot submit this file through the ```sbatch```
+command due to the ```input()``` functions. 
+
+2. Press enter to move through the script. 
+
+3. Observe the outputs. 
+
+#### Questions
+1. How many rows and columns are in the dataset?
+2. In a Pandas DataFrame, what is the index? 
+3. What is the index of the 10th email message in the dataset?
+4. What is the difference between the index and the contents of the 'Email no.' column?
+
+### Correlations
+The next step for data exploration is to calculate the correlations between the columns in the
+dataset. The correlations may provide further insights into how words are related across emails. 
+
+1. Run the file ```correlations.py```. This file can by run through ```sbatch```
+2. If you run the file more than once, make sure you comment and uncomment the appropriate
+   lines in such a way that you load the file instead of recomputing it. 
+3. Observe the output. 
+4. Now, change lines 56 to 60 to save the top and bottom correlations into files.
+
+#### Questions
+1. What are the top 5 correlations? 
+2. What are the bottom 5 correlations?
+3. What, if anything, can you infer from the top correlations? 
+4. Include the lines that you modified to save the correlations in your report (number 4 above)
+
+### Scatter Plots
+Scatter plots allow us to visualize the relationships between any two variables in the dataset. 
+
+1. Run the file ```scatter-plots.py``` and observe the output plot. 
+2. You will need to modify line 36 to save the plot instead of using the show() function.
+
+#### Questions
+1. Do you observe a relationship between the words **enron** and **deal**? Explain why or why not. 
+2. Create at least three more scatter plots using different word combinations. Choose the word
+   combinations based on the top correlations that you found using the ```correlations.py``` file. 
+3. Answer question 1 for all your scatter plots. 
+
+### Linear regression
+This file implements linear regression. 
+
+1. Run the file ```linear-regression.py```
+2. Observe the output
+3. You may need to change the show() function to observe the plots. 
+
+#### Questions
+1. Why are we dropping the 'Email no' and 'Prediction' columns? 
+2. What does the value 0.2 in the test_size option of the function ```train_test_split()``` mean? 
+3. What is the MSE? Is this a good or bad result? Explain why. 
+4. Rerun the file at least to more times with different target and input columns. Answer question 
+   3 for  all  your word combinations.
+
+### Multi-linear regression
+Multi-linear regression uses the same training algorithm as linear regression but using
+multiple in put variables. 
+
+1. Run the file ```multi-linear-regression.py```
+2. Observe the output. 
+3. You may need to change the show() function to observe the plots. 
+
+#### Questions
+1. The coefficient output has multiple values. Why does multilinear regression have multiple
+   coefficients while linear regression only has one? 
+2. Modify the code to determine if there are coefficients equal (or almost) zero. Are there any
+   coefficients equal to zero? If there are, what does it mean that a coefficient is zero?
+3. Modify the code to use the Lasso regression algorithm. Do you get more zero coefficients?  
+3. Observe the output plot carefully. You should see that some of the predictions are negative.
+   However, we know that there are no negative value sin our dataset and it would make no sense
+   to have a negative number of words in an email. Read this webpage and replace the Linear
+   Regression algorithm with an appropriate algorithm for this ML task. 
+4. Provide a plot of your results with the new algorithm that prevents negative predictions. 
+
+
+
+
+## Data Reference
+Balaka Biswas 
+[here](https://www.kaggle.com/datasets/balaka18/email-spam-classification-dataset-csv/download?datasetVersionNumber=1). 
+

@@ -17,11 +17,14 @@ every element represents the correlations between two variables.
 The elements in the diagonal represent the self-correlation, which is always 1.  
 '''
 df = df.drop('Email No.', axis=1) #We first drop the email number
-#correlation_matrix = df.corr() # This may take a few minutes due to the large size of the
-# dataset. You can uncomment he following lines to save the matrix and then load it when needed
+
+correlation_matrix = df.corr() # This may take a few minutes due to the large size of the
+# dataset. 
+correlation_matrix.to_csv('correlations.csv')
+
+# You can uncomment the following lines to save the matrix and then load it when needed
 # instead of recomputing everytime. Don't forget to comment the line above.   
-#correlation_matrix.to_csv('correlations.csv')
-correlation_matrix = pd.read_csv('correlations.csv', index_col=0)
+# correlation_matrix = pd.read_csv('correlations.csv', index_col=0)
 
 '''
 Since we have thousands of variables, we cannot simply look at the matrix. We instead 
@@ -35,8 +38,6 @@ absolute_correlations = correlation_matrix.abs()
 # It will preserve their position by creating two index columns. One for the column and one for the row
 # of the original value. 
 correlation_series = absolute_correlations.unstack()
-print(correlation_series)
-input()
 
 # Sort the correlation Series in descending order
 sorted_correlations = correlation_series.sort_values(ascending=False)

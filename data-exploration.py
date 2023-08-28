@@ -40,17 +40,17 @@ input()
 '''
 Similarly to printing the whole dataset, printing the
 output may not be too useful. Instead, we count the number of numeric values per column and 
-compare it to the totoal number of rows. If the number of rows is equal to the number of numeric-values
-in the column then, all values are numeric.
+compare it to the total number of rows. If the number of rows is equal to the number of non-missing
+values in the column, then there are no missing values.
 '''
-num_numeric = df.count()
-print(num_numeric)
+non_missing = df.count()
+print(non_missing)
 input()
 
-filtered_df = num_numeric[num_numeric<df.shape[0]] 
+filtered_df = non_missing[non_missing<df.shape[0]] 
 # retrieve the rows in num_numeric that are less than the number of rows in the original dataframe. 
 
-print("If you see an output after this, you have non-numeric values")
+print("If you see an output after this, you have missing values")
 print(filtered_df)
 input()
 

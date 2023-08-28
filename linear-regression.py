@@ -14,9 +14,13 @@ dataframe.  A dataframe is the datastructure that Pandas uses to hold the data. 
 think about it as a Excel sheet but for Python
 '''
 df = pd.read_csv('emails.csv')
-df=df.sample(n=2000,  random_state=1) # We take n randomly chosen rows to facilitate debugging. 
-columns_to_drop = df.columns[df.eq(0).all()] # Find all-zero columns
-df = df.drop(columns=columns_to_drop)# Drop all-zero columns since they will not affect the results. 
+
+'''
+Uncomment the following three lines if you are debugging or want the script to run faster
+'''
+# df=df.sample(n=2000,  random_state=1) # We take n randomly chosen rows to facilitate debugging. 
+# columns_to_drop = df.columns[df.eq(0).all()] # Find all-zero columns
+# df = df.drop(columns=columns_to_drop)# Drop all-zero columns since they will not affect the results. 
 
 '''
 In this script, we will use linear regression to predict the number of occurrances of a certain
@@ -76,8 +80,8 @@ y_pred = model.predict(X_test)
 # Calculate the mean squared error to evaluate the model's performance
 mse = mean_squared_error(y_test, y_pred)
 
-print("Coefficient:", model.coef_)
-print("Intercept:", model.intercept_)
+print("Coefficient:", model.coef_) #w's in the formulas
+print("Intercept:", model.intercept_) #b in the formulas 
 print("Mean Squared Error:", mse)
 
 '''

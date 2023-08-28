@@ -73,8 +73,8 @@ y_pred = model.predict(X_test)
 # Calculate the mean squared error to evaluate the model's performance
 mse = mean_squared_error(y_test, y_pred)
 
-print("Coefficient:", model.coef_)
-print("Intercept:", model.intercept_)
+print("Coefficient:", model.coef_) #w's in the formulas
+print("Intercept:", model.intercept_)# b in the formulas
 print("Mean Squared Error:", mse)
 
 '''
