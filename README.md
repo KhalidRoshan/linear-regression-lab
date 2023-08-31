@@ -98,3 +98,40 @@ multiple in put variables.
 Balaka Biswas 
 [here](https://www.kaggle.com/datasets/balaka18/email-spam-classification-dataset-csv/download?datasetVersionNumber=1). 
 
+# logistic-regression-lab
+
+You will complete this lab by modifying the linear regression code lab. In logistic regression, we are
+interested in predicting the value of the 'Prediciton' column in the dataset. This will require that you
+repeat the linear regression lab but for logistic regression. 
+
+## Instructions
+
+### Scatter plot
+1. Copy the scatter-plots.py file and name the copy scatter-plot-classification.py
+2. Modify the code to display the points on the plot according to their label in the 'Prediction' column.
+   For example, the dots that correspond to spam email can be painted red while the regular email can be
+   painted blue. 
+
+#### Questions
+1. Do you observe a relationship between the words **enron**, **deal**, and the dot colors? Explain why or why not. 
+2. Create at least three more scatter plots using different word combinations. Choose the word
+   combinations based on the top correlations that you found using the ```correlations.py``` file. 
+3. Answer question 1 for all your scatter plots with colored dots. 
+
+### Logistic Regression with one input variable
+
+1. Copy the file linear-regresion.py and name the copy logistic-regression.py
+2. Modify the code to ensure that the 'Prediction' column is not dropped. 
+3. Modify the header to ensure that the LogisticRegression module from sickit learned is loaded
+4. Modify the code that calls the LinearRegression model and instead call the LogisticRegression model. 
+5. Modify the performance measure line to use an appropriate performance measure. The MSE is no longer
+   appropriate in logistic regression. 
+6. Remove the Coefficient and Intercept lines. 
+7. The plot should show the classification results. Usually, we use a confusion matrix. Scikit learn has
+   a function to create it. 
+
+#### Questions
+1. Explain what is a confusion matrix. What are the rows? What are the columns? What do you expect to see
+   in the confusion matrix if your model makes perfect predictions? What if it completely wrong every
+   time? 
+
