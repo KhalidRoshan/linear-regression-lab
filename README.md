@@ -87,9 +87,9 @@ multiple in put variables.
 3. Modify the code to use the Lasso regression algorithm. Do you get more zero coefficients?  
 3. Observe the output plot carefully. You should see that some of the predictions are negative.
    However, we know that there are no negative value sin our dataset and it would make no sense
-   to have a negative number of words in an email. Read this webpage and replace the Linear
+   to have a negative number of words in an email. Read this [webpage](https://scikit-learn.org/stable/modules/linear_model.html) and replace the Linear
    Regression algorithm with an appropriate algorithm for this ML task. 
-4. Provide a plot of your results with the new algorithm that prevents negative predictions. 
+4. Provide a screen shot of a plot of your results with the new algorithm that prevents negative predictions. 
 
 
 
@@ -117,6 +117,7 @@ repeat the linear regression lab but for logistic regression.
 2. Create at least three more scatter plots using different word combinations. Choose the word
    combinations based on the top correlations that you found using the ```correlations.py``` file. 
 3. Answer question 1 for all your scatter plots with colored dots. 
+4. Include screen shots of your scatter plots. 
 
 ### Logistic Regression with one input variable
 
@@ -134,4 +135,5 @@ repeat the linear regression lab but for logistic regression.
 1. Explain what is a confusion matrix. What are the rows? What are the columns? What do you expect to see
    in the confusion matrix if your model makes perfect predictions? What if it completely wrong every
    time? 
+2. Include a screen shot of your confusion matrix.
 
