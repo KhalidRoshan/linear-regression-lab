@@ -137,3 +137,43 @@ repeat the linear regression lab but for logistic regression.
    time? 
 2. Include a screen shot of your confusion matrix.
 
+# Decision Tree Lab
+In this lab, we will use a decision tree to classify the emails into spam and normal emails. 
+The main advantage of decision trees is that they tell us what features are being sued to decide the
+classification output. 
+
+## Instructions
+1. Run the file ```decision-tree.py```
+2. Open the file ```decision-tree.png```
+3. Observe the output of the .png file
+
+### Questions
+1. Read pages 176-178 in the ML book and the following:
+   1. What does "enron <= 0.5" mean in the root node? 
+   2. What does "sample" mean?
+   3. What does the vector next to "value" mean?
+   4. What does class mean?
+2. What is the Gini index? 
+3. What does a high/low Gini index mean for a feature? 
+4. The Sikit learn decision tree depends on the following parameters:
+      - max_depth: the maximum height of the decision tree. 
+      - min_samples_split: the minimum number of samples a node must have before it can be split
+      - min_samples_leaf: the minimum number of samples a leaf node must have
+      - max_leaf_nodes: the maximum number of leaf nodes
+      - max_feature: the maximum number of features that are evaluated for splitting at  each node
+
+   Increase the max_depth of the tree and observe the confusion matrix. Did you model improve its
+   predictions? Explain why or why not. 
+
+6. Would a hiogher value for max_depth increase or decrease the capacity of the model? 
+   Explain why or why not. 
+
+7. How can we tell if the decision tree is overfitted? Briefly give an explanation. 
+
+# Random Forest lab
+
+## Instructions
+1. Rewrite the ```decision-tree.py``` code but this time using random forests instead
+   of decision trees. 
+2. Compare the results of the decision tree and the random forests by comptuing their
+   confusion matrices. Which one performs better? Can you improve the perfomance of the worse classifier  by changing its parameters? If so, explain. 
